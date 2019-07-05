@@ -33,13 +33,16 @@ class Loader {
             this.target.innerHTML = '<div class="quickloader_nodisplay" id="quickloader_console"></div>';
             this.console = document.getElementById("quickloader_console");
         } catch (error) {
-            
+	    // Well, shit, we don't have a console yet, so...
+            alert("A fatal exception occured while initialising the loader. Please report this error code to this website's owner: " + error;
         }
         // Try constructing classes we need 
         try {
+	        this.Log('Initialiser', 'INFO', 'Console log intialisation complete.');
+            this.Log('Initialiser', 'INFO', 'Constructing class dependencies');
             this.date = new Date();
         } catch (error) {
-            
+            this.Log('Initialiser'
         }
     }
     Initialise() {
