@@ -21,7 +21,7 @@ CSS is the most shit programming language I've learnt so far.
 */
 @font-face {
     font-family: Open Sans;
-    src: url(OpenSans-Regular-webfont.woff);
+    src: url(OpenSans-Regular-webfont.woff), url(OpenSans-Regular-webfont.ttf);
 }
 
 .quickstarter_nodisplay {
