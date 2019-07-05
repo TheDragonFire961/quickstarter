@@ -30,8 +30,11 @@ CSS is the most shit programming language I've learnt so far.
 
 .quickstarter_body {
     font-family: Open Sans, Arial, sans-serif;
-    font-size: 85%
+    font-size: 85%;
+    color: #ffffff;
     background-color: #000000;
+    width: 400em;
+	height: 300em;
 }
 
 .quickstarter_button {
