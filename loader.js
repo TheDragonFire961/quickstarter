@@ -19,8 +19,8 @@ class Loader {
     // Customers, this is where you can set your custom parameters.
     user_parameters() {
         this.logo = "";
-        this.target_id = "quickloader";
-	    this.loader_mode = "manual_start" // Modes: auto, manual, manual_start_client, manual_start_loader.
+        this.target_id = "quickstarter";
+	this.loader_mode = "manual_start" // Modes: auto, manual, manual_start_client, manual_start_loader.
         this.splash_mode = "auto" // Modes: auto, diagnostic, none, standard.
         this.log_type = "html"; // Log types: none, console, html, all.
         // files_to_load = ""
