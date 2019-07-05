@@ -31,6 +31,7 @@ CSS is the most shit programming language I've learnt so far.
 .quickloader_body {
     font-family: Open Sans, Arial, sans-serif;
     font-size: 85%
+    background-color: #000000;
 }
 
 .quickloader_button {
