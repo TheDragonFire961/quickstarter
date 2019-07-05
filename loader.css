@@ -1,5 +1,5 @@
 /*
-    main.css: contains all the CSS that's used to format the pages here. Taken from <https://github.com/TheDragonFire961/education-cybersafety/blob/master/css/theme.css>.
+    loader.css: contains all the CSS that's used to format the pages here. Taken from <https://github.com/TheDragonFire961/education-cybersafety/blob/master/css/theme.css>.
 	
     Copyright (C) 2019 Ethan/TheDragonFire961.
     This file is part of Quickstarter.
@@ -28,13 +28,13 @@ CSS is the most shit programming language I've learnt so far.
     display: none;
 }
 
-.quickloader_body {
+.quickstarter_body {
     font-family: Open Sans, Arial, sans-serif;
     font-size: 85%
     background-color: #000000;
 }
 
-.quickloader_button {
+.quickstarter_button {
     background-color: #ffffff;
     border-radius: 5px;
     font-family: Open Sans, Arial;
@@ -53,14 +53,14 @@ CSS is the most shit programming language I've learnt so far.
     background-color: #cccccc;
     cursor: pointer;
 }
-.quickloader_okay {
+.quickstarter_okay {
     background-color: #00dd00;
 }
 
-.quickloader_alert {
+.quickstarter_alert {
     background-color: #dd0000;
 }
 
-.quickloader_failed {
+.quickstarter_failed {
     background-color: #dd0000;
 }
