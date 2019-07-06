@@ -8,10 +8,12 @@
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
+	
     Quickstarter is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
+	
     You should have received a copy of the GNU Lesser General Public License
     along with Quickstarter.  If not, see <https://www.gnu.org/licenses/>.
 */
@@ -34,15 +36,63 @@ CSS is the most shit programming language I've learnt so far.
     color: #ffffff;
     background-color: #000000;
     width: 60em;
-    height: 40em;
+	position: relative;
+	height: 40em;
 }
 
+/* See? CSS is shit. Had to had this son of a bitch for it to center. (This does mean that IE8 support is out the window, but fuck IE8)
+   Thanks to <https://stackoverflow.com/a/23384995> */
+#quickstarter_progress {
+    position: absolute;
+    left: 50%;
+	bottom: 0.75em;
+    transform: translate(-50%, 0);
+	text-align: center;
+}
+
+#quickstarter_progress_bar {
+	height: 1.5em;
+	background: #555;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	padding: 0.25em;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+	width: 35em;
+}
+
+#quickstarter_progress_bar_fill {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    background-color: rgb(43,194,83);
+    background-image: linear-gradient(
+        center bottom,
+        rgb(43,194,83) 37%,
+        rgb(84,240,84) 69%
+    );
+    box-shadow: 
+        inset 0 2px 9px  rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+#quickstarter_progress_counter_parent {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .quickstarter_button {
     background-color: #ffffff;
     border-radius: 5px;
     font-family: Open Sans, Arial;
     box-shadow: none;
-    color: #000000;
+    color: #00ff00;
     text-decoration: none;
     padding-top: 5px;
     padding-left: 5px;
