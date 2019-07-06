@@ -6,10 +6,12 @@
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
+	
     Quickstarter is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
+	
     You should have received a copy of the GNU Lesser General Public License
     along with Quickstarter.  If not, see <https://www.gnu.org/licenses/>.
 */
@@ -27,12 +29,13 @@ class Loader {
     }
     constructor() {
         this.user_parameters();
+		this.version = "1.0.0-master";
         // Try constructing the relevant tags
         try {
             this.target = document.getElementById(this.target_id);
-            this.target.innerHTML = '<div class="quickstarter_body" id="quickstarter_body"></div>
+            this.target.innerHTML = '<div class="quickstarter_body" id="quickstarter_body"></div>';
             this.body = document.getElementById("quickstarter_body");
-            this.body.innerHTML = '<div class="quickstarter_nodisplay" id="quickstarter_console"></div>';
+            this.body.innerHTML = '<div class="quickstarter_nodisplay" id="quickstarter_console"></div><div id="quickstarter_progress"><div id="quickstarter_progress_state"></div><div id="quickstarter_progress_bar"><span id="quickstarter_progress_bar_fill" style="width: 23%;"></span></div><div id="quickstarter_progress_counter_parent"><span id="quickstarter_progress_counter">0</span>%</div></div></div>';
             this.console = document.getElementById("quickstarter_console");
 	        this.date = new Date();
         } catch (error) {
@@ -42,6 +45,13 @@ class Loader {
         // Try constructing classes we need 
         try {
 	        this.Log('Initialiser', 'INFO', 'Console log intialisation complete.');
+			this.Log('Initialiser', 'INFO', 'Quickstarter by Ethan/TheDragonFire961, version ' + this.version);
+			this.Log('Initialiser', 'INFO', 'Initialising progress bar');
+			this.progress = document.getElementById("quickstarter_progress");
+			this.progress_state = document.getElementById("quickstarter_progress_state");
+			this.progress_bar = document.getElementById("quickstarter_progress_bar");
+			this.progress_counter = document.getElementById("quickstarter_progress_counter");
+			this.progress_state.innerHTML = 'Preparing';
             this.Log('Initialiser', 'INFO', 'Constructing class dependencies');
         } catch (error) {
             this.Log('Initialiser', 'ERROR', 'Error initialising class dependencies: ' + error);
@@ -58,10 +68,10 @@ class Loader {
         log_message += message;
         // Write to HTML, if that is enabled.
         if (this.log_type === "html" || this.log_type === "all") {
-            this.console = log_message + '<br>';
+            this.console.innerHTML += log_message + '<br>';
         }
-        if (this.log_type === "html" || this.log_type === "all") {
-            this.console = log_message + '<br>';
+        if (this.log_type === "console" || this.log_type === "all") {
+            console.log(log_message);
         }
     }
 }
